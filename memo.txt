@@ -1,0 +1,5 @@
+L ’ interpréteur peut être lancé directement depuis la ligne de commande (dans un « shell » Li-
+nux, ou bien dans une fenêtre DOS sous Windows) : il suffit d ’ y taper la commande python3 (en
+supposant que le logiciel lui-même ait été correctement installé, et qu’il s’agisse d’une des
+dernières versions de Python), ou python (si la version de Python installée sur votre ordina-
+teur est antérieure à la version 3.0).
