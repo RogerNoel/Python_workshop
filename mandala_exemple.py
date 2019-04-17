@@ -1,12 +1,11 @@
 from turtle import *
 from random import *
-import random
 
 speed('fastest')
 
 number_of_colors = 50
 
-colors = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
+colors = ["#"+''.join([choice('0123456789ABCDEF') for j in range(6)])
              for i in range(number_of_colors)]
 
 def spirale(rayon=1, rayonSpiral=500):
@@ -29,16 +28,16 @@ def forme3(col, lg):
         left(115)
 
 for i in range(number_of_colors):
-    color(random.choice(colors))
+    color(choice(colors))
     spirale(randint(2,5), randint(75,500))
     up()
     goto(randint(-500,500),randint(-500,500))
     down()
-    squaredRound(random.choice(colors), randint(75,500))
+    squaredRound(choice(colors), randint(75,500))
     up()
     goto(randint(-500,500),randint(-500,500))
     down()
-    forme3(random.choice(colors), randint(50,500))
+    forme3(choice(colors), randint(50,500))
 
 done()
 

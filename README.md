@@ -17,7 +17,7 @@ Ceci n'est qu'un premier tri des ressources à exploiter, à redéfinir avec Rap
 11) Exos de révision (Swinnen - 55)
 12) Interfaces graphiques (Swinnen - Chap.8)
 
-##Installation et prérequis
+## Installation et prérequis
 
 -Vérifiez votre version de Python3 installée (actuellement 3.6+ ou 3.7+)
 \$ pyhton3 -V
@@ -25,7 +25,19 @@ Ceci n'est qu'un premier tri des ressources à exploiter, à redéfinir avec Rap
 -Pour installer Python3
 \$ sudo apt-get install python3
 
-### IDLE : environnment de développement pour Python
+## Cheatsheet Python3
+
+disponible ici : https://programmingwithmosh.com/python/python-3-cheat-sheet/ 
+
+## Modules :
+
+Turtle : Documentation ici : https://docs.python.org/3/library/turtle.html 
+Random : https://docs.python.org/3/library/random.html#module-random
+Math : https://docs.python.org/3/library/math.html#module-math 
+
+Un index des modules disponibles se trouve ici : https://docs.python.org/3/py-modindex.html 
+
+## IDLE : environnment de développement pour Python
 
 -Installez IDLE :
 $ sudo apt-get update
@@ -34,19 +46,3 @@ $ sudo apt-get install idle3
 -lancez IDLE :
 \$ idle
 
-### PyGame
-
-Avant l'installation, assurez-vous d'avoir installé les dépendances : libsdl1.2debian-all (dépôt Universe), libsdl1.2-dev, libsdl-image1.2, libsdl-image1.2-dev, libsdl-ttf2.0-0, libsdl-ttf2.0-dev, libsdl-mixer1.2, libsdl-mixer1.2-dev, libsmpeg0, libsmpeg0-dev, libpng-dev et libjpeg-dev !
-
-Voici la commande pour les installer sous Ubuntu :
-
-\$ sudo apt-get install libsdl1.2debian:i386 libsdl1.2debian
-
-Vous devez avoir pip installé :
-$ sudo apt-get install python3-pip
-
-Une fois les dépendances installées, ouvrez un terminal :
-$ python3 -m pip install -U pygame --user
-
-Pour tester, lancez le jeu :
-$ python3 -m pygame.examples.aliens
