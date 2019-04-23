@@ -27,11 +27,8 @@ apresEgalite = False
 #Constructeur de carte
 class Carte:
     """Classe de cartes"""
-    def __init__(self, couleur, rang, valeur):
-        self.couleur = couleur
-        self.rang = rang
-        self.valeur = valeur
-        self.nom = "{0} de {1}".format(self.rang, self.couleur)
+    def __init__(self, couleur, rang):
+        self.nom = "{0} de {1}".format(rang, couleur)
 
 #Constructeur d'un jeu de carte
 class Jeu:
@@ -43,11 +40,11 @@ class Jeu:
             for cleRang, valeurRang in listeRangs.items():
                 rang = cleRang
                 valeur = valeurRang
-                carte = Carte(couleur, rang, valeur)
+                carte = Carte(couleur, rang)
                 self.jeu[carte.nom] = valeur
                 self.listeDuJeu.append(carte.nom)
 
-    def afficherValeurs(self):
+    def afficherJeu(self):
         """Afficher le jeu construit"""
         print(self.jeu)
 
@@ -104,37 +101,40 @@ def egalite(n):
 
 def bataille(n):
     """Lancer la bataille entre 2 cartes"""
-    global apresEgalite
-    carte1 = j1.tirerCarte(n)
-    c1Valeur = j1.jeu[carte1]
-    carte2 = j2.tirerCarte(n)
-    c2Valeur = j2.jeu[carte2]
-    print("\n{0}, votre carte est : {1}".format(j1.nom, carte1))
-    print("La carte de {0} est : {1}".format(j2.nom, carte2))
-    if c1Valeur > c2Valeur:
-        print ("\n" + carte1 + " est plus grand que " + carte2)
-        if apresEgalite:
-            j1.points += 3
-            apresEgalite = False
-        else:
-            j1.points +=1
-        gagne(j1)
-        batailleSuite(n)
+    if(n < 52):
+        global apresEgalite
+        carte1 = j1.tirerCarte(n)
+        c1Valeur = j1.jeu[carte1]
+        carte2 = j2.tirerCarte(n)
+        c2Valeur = j2.jeu[carte2]
+        print("\n{0}, votre carte est : {1}".format(j1.nom, carte1))
+        print("La carte de {0} est : {1}".format(j2.nom, carte2))
+        if c1Valeur > c2Valeur:
+            print ("\n" + carte1 + " est plus grand que " + carte2)
+            if apresEgalite:
+                j1.points += 3
+                apresEgalite = False
+            else:
+                j1.points +=1
+            gagne(j1)
+            batailleSuite(n)
 
-    elif c1Valeur < c2Valeur:
-        print (carte1 + " est plus petit que " + carte2)
-        if apresEgalite:
-            j2.points += 3
-            apresEgalite = False
-        else:
-            j2.points +=1
-        gagne(j2)
-        batailleSuite(n)
+        elif c1Valeur < c2Valeur:
+            print (carte1 + " est plus petit que " + carte2)
+            if apresEgalite:
+                j2.points += 3
+                apresEgalite = False
+            else:
+                j2.points +=1
+            gagne(j2)
+            batailleSuite(n)
 
+        else:
+            print ("!!! egalite !!!")
+            apresEgalite = True
+            egalite(n)
     else:
-        print ("!!! egalite !!!")
-        apresEgalite = True
-        egalite(n)
+        print("Game Over !")
 
 def yes_or_no(question):
     """Demander une confirmation"""
