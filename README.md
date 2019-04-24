@@ -1,21 +1,21 @@
 # Python_workshop
 
-Resources to perform a workshop based upon Python language -->
-Ceci n'est qu'un premier tri des ressources à exploiter, à redéfinir avec Raph.
+1. récup de la veille python: https://docs.google.com/presentation/d/1t_SbXXxjJXkDEJA-YMNQfs_KPddd-xwsnUQDE8viPuA/edit?usp=sharing
 
-1. récup de ma veille python: https://docs.google.com/presentation/d/1t_SbXXxjJXkDEJA-YMNQfs_KPddd-xwsnUQDE8viPuA/edit?usp=sharing
+### Particularités de Python
+    * syntaxe simplifiée ; la simplification de la syntaxe est « compensée » par un rigueur dans l’indentation ; ce qui oblige à écrire des lignes de code propres,
+    * typage dynamique ; en plus du confort, cette particularité permet la métaprogrammation et le réflexivité (métaprogrammation : programmes qui manipulent des données décrivant elles-mêmes des programmes – réflexivité : capacité d’un programme à examiner/modifier ses propres structures internes. Ces deux caractéristiques dans le cadre de programmes auto-modifiants,
+    * modulable : les fonctions intégrées au langage sont relativement peu nombreuses, les autres sont regroupées dans des fichiers séparés qu’on appelle « modules ».
 
-2) Caractéristiques du langage (Swinnen - intro)
-3) Installation https://www.python.org/downloads/
-4) Environnements (terminal ou IDLE: Swinnen p12 et p31)
-5) Typage (Swinnen - 16)
-6) Flux d'exécution (Swinnen - Chap.3)
-7) Blocs d'instructions (Swinnen - 23)
-8) Listes (Swinnen - 44)
-9) Imports de fonctions (Swinnen - 50)
-10) Détente: module Turtle (dessin - Swinnen - 52)
-11) Exos de révision (Swinnen - 55)
-12) Interfaces graphiques (Swinnen - Chap.8)
+## Domaines d'utilisation (non exhaustif)
+    * éducation, de plus en plus de jeu de programmation, comme les Lego Mindstorm peuvent être programmés en Python,
+    * développement WEB : à l’aide du framework Django, plutôt orienté back-end,
+    * data-science : 
+        - c’est un langage populaire dans le Big Data, car il est modulable, puissant et facile à écrire,
+        - aussi populaire dans le domaine du machine learning,
+        - c’est un langage de script, Python excelle dans la récupération de paramètres, le parsing d’un fichier, les petits scripts rapides, etc.
+    • beaucoup de logiciels scientifiques utilisent Python, de même qu’une partie des logiciels de géolocalisation
+    • …
 
 ## Installation et prérequis
 
@@ -37,7 +37,26 @@ Math : https://docs.python.org/3/library/math.html#module-math
 
 Un index des modules disponibles se trouve ici : https://docs.python.org/3/py-modindex.html 
 
+### Exemple de module : le module « random ».
+Il faudra l’appeler grâce à la syntaxe « from random import * » ; ce qui donnera l’accès à toute une série de fonctions liées à la génération aléatoire de données ;
+Un aperçu :
+    * randint(a,b) : Donne un entier choisit au hasard entre a et b compris,
+    * random() : Donne un flottant au hasard dans l'intervalle,
+    * choice(liste) : Choisit un élément au hasard dans une liste,
+    * shuffle(liste) : Mélange la liste sur place (c'est à dire qu'il modifie la liste d'origine).
+    * ...
+
 ## IDLE : environnment de développement pour Python
+
+Pour travailler avec Python 3, il faut utiliser un interpréteur ; on peut travailler dans un terminal ou télécharger l’interpréteur Python IDLE :
+    * Pour lancer un fichier dans le terminal : ouvrez le terminal dans le dossier qui contient le fichier.py et taper « python3 nom_fichier.py »
+    * Installer IDLE suivant les instructions qui correspondent à votre OS.
+
+Pour ce qui concerne VS Code, j’utilise l’extension « Python (microsoft) ».
+
+## Syntaxe
+
+Après avoir installé l'extension Python, ouvrez /01 introduction/syntaxe.py
 
 -Installez IDLE :
 $ sudo apt-get update
