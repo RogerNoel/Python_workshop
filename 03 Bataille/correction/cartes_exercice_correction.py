@@ -4,7 +4,7 @@ from random import *
 
 ##Initiation d'une liste et d'un dictionnaire avec les valeurs des cartes pour la bataille
 listeCouleurs = ["♠", "♥", "♦", "♣"]
-listeRangs = {
+dicoRangs = {
     "2":2,
     "3":3,
     "4":4,
@@ -39,19 +39,19 @@ class Jeu:
         self.jeuComplet = {}
         self.listeDuJeu = []
         for couleur in listeCouleurs: 
-            for cleRang, valeurRang in listeRangs.items():
+            for cleRang, valeurRang in dicoRangs.items():
                 rang = cleRang
                 valeur = valeurRang
                 carte = Carte(couleur, rang, valeur)
                 self.jeuComplet[carte.nom] = valeur
                 self.listeDuJeu.append(carte.nom)
 
-    def battre(self):
-        shuffle(self.listeDuJeu)
+    # def battre(self):
+    #     shuffle(self.listeDuJeu)
 
-    def tirerCarte(self, n):
-        """Tire la carte suivante"""
-        return self.listeDuJeu[n]
+    # def tirerCarte(self, n):
+    #     """Tire la carte suivante"""
+    #     return self.listeDuJeu[n]
 
 
  # On peut créer une instance de Jeu et afficher le jeu pour vérifier s'il est bien construit  
@@ -66,7 +66,7 @@ print(monJeu.listeDuJeu)
 carte2 = monJeu.tirerCarte(0)
 print(carte2)
 
-# Voilà, nous allons pouvoir commencer la bataille ! Crée une fonction qui lancera une battaille entre 2 joueurs, pour cela il te faudra une classe pour créer un Joueur en fonction de la classe Jeu. Cette classe Joueur aura 2 propriétés : un nom de joueur (passé en paramètre) et un total de points. 
+# Voilà, nous allons pouvoir commencer la bataille ! Crée une fonction qui lancera une battaille entre 2 joueurs, pour cela il te faudra une classe Joueur pour créer un joueur qui dépendra de la classe Jeu. Cette classe Joueur aura 2 propriétés : un nom de joueur (passé en paramètre) et un total de points. 
 
 class Joueur(Jeu):
     """Classe des joueurs"""
@@ -75,17 +75,17 @@ class Joueur(Jeu):
         self.nom = nom
         self.points = 0
 
-# On peut donc créer 2 joueurs
+# On peut donc créer 2 joueurs et afficher leurs noms et leurs points :
 j1 = Joueur("Luke")
 j2 = Joueur("Dark Vador")
 print(j1.nom, "a", j1.points, "points et", j2.nom, "a", j2.points, "points")
 
-# Comme elle dépend de Jeu, elle héritera aussi de ses caractéristiques.
+# Comme elle dépend de Jeu, elle héritera aussi de ses caractéristiques. Utilise la fonction pour mélanger le jeu de joueur1, affiche le jeu mélangé et affiche une carte tiré avec l'index 0 : 
 j1.battre()
 print(j1.listeDuJeu)
 print(j1.tirerCarte(0), j2.tirerCarte(0))
 
-# Crée la fonction pour la bataille
+# Crée la fonction pour la bataille, ici je te laisse réfléchir à l'algorithmie... 
 def bataille(n):
     """Lancer la bataille entre 2 cartes"""
     if(n < 52):

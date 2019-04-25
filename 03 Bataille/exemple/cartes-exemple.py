@@ -24,6 +24,17 @@ carte1 = ""
 carte2 = ""
 apresEgalite = False
 
+# Fonction de demande de confirmation o/n
+def yes_or_no(question):
+    """Demander une confirmation"""
+    reply = str(input(question+' (o/n): ')).lower().strip()
+    if reply[0] == 'o':
+        return True
+    if reply[0] == 'n':
+        return False
+    else:
+        return yes_or_no("Oh lalala... il me faut un oui ou non ")
+
 #Constructeur de carte
 class Carte:
     """Classe de cartes"""
@@ -136,15 +147,6 @@ def bataille(n):
     else:
         print("Game Over !")
 
-def yes_or_no(question):
-    """Demander une confirmation"""
-    reply = str(input(question+' (o/n): ')).lower().strip()
-    if reply[0] == 'o':
-        return True
-    if reply[0] == 'n':
-        return False
-    else:
-        return yes_or_no("Oh lalala... il me faut un oui ou non ")
 
 #Lancement du script pour jouer une partie de bataille
 askName()
