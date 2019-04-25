@@ -3,7 +3,7 @@
 1. récup de la veille python: https://docs.google.com/presentation/d/1t_SbXXxjJXkDEJA-YMNQfs_KPddd-xwsnUQDE8viPuA/edit?usp=sharing
 
 ### Particularités de Python
-    * syntaxe simplifiée ; la simplification de la syntaxe est « compensée » par un rigueur dans l’indentation ; ce qui oblige à écrire des lignes de code propres,
+    * syntaxe simplifiée ; la simplification de la syntaxe est « compensée » par une rigueur dans l’indentation ; ce qui oblige à écrire des lignes de code propres,
     * typage dynamique ; en plus du confort, cette particularité permet la métaprogrammation et le réflexivité (métaprogrammation : programmes qui manipulent des données décrivant elles-mêmes des programmes – réflexivité : capacité d’un programme à examiner/modifier ses propres structures internes. Ces deux caractéristiques dans le cadre de programmes auto-modifiants,
     * modulable : les fonctions intégrées au langage sont relativement peu nombreuses, les autres sont regroupées dans des fichiers séparés qu’on appelle « modules ».
 
