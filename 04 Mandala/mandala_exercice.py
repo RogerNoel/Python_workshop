@@ -15,7 +15,7 @@ done()
 
 # On lance le script dans le terminal : $ python3 mandala-exercice.py
 # Voilà, à toi d'ajouter des formes, d'utiliser le module random, math, etc...
-# Un exemple que j'ai réalisé se trouve dans le fichier mandala.py
+# Un exemple que j'ai réalisé se trouve dans le fichier mandala_exemple.py
 
 
 
