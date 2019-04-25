@@ -40,17 +40,17 @@ Un index des modules disponibles se trouve ici : https://docs.python.org/3/py-mo
 ### Exemple de module : le module « random ».
 Il faudra l’appeler grâce à la syntaxe « from random import * » ; ce qui donnera l’accès à toute une série de fonctions liées à la génération aléatoire de données ;
 Un aperçu :
-    * randint(a,b) : Donne un entier choisit au hasard entre a et b compris,
-    * random() : Donne un flottant au hasard dans l'intervalle,
-    * choice(liste) : Choisit un élément au hasard dans une liste,
-    * shuffle(liste) : Mélange la liste sur place (c'est à dire qu'il modifie la liste d'origine).
-    * ...
+* randint(a,b) : Donne un entier choisi au hasard entre a et b compris,
+* random() : Donne un flottant au hasard dans l'intervalle,
+* choice(liste) : Choisit un élément au hasard dans une liste,
+* shuffle(liste) : Mélange la liste sur place (c'est à dire qu'il modifie la liste d'origine).
+* ...
 
 ## IDLE : environnment de développement pour Python
 
 Pour travailler avec Python 3, il faut utiliser un interpréteur ; on peut travailler dans un terminal ou télécharger l’interpréteur Python IDLE :
-    * Pour lancer un fichier dans le terminal : ouvrez le terminal dans le dossier qui contient le fichier.py et taper « python3 nom_fichier.py »
-    * Installer IDLE suivant les instructions qui correspondent à votre OS.
+* Pour lancer un fichier dans le terminal : ouvrez le terminal dans le dossier qui contient le fichier.py et taper « python3 nom_fichier.py »
+* Installer IDLE suivant les instructions qui correspondent à votre OS.
 
 Pour ce qui concerne VS Code, j’utilise l’extension « Python (microsoft) ».
 
